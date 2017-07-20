@@ -15,7 +15,6 @@ function getAllData() {
                     }
                 });
                 resolve(arr);
-                console.log(data.data);
             }
         });
     });
