@@ -7,8 +7,11 @@ function getAllData() {
             dataType: 'jsonp',
             success: function (data) {
                 const arr = data.data.map((comment) => {
+                    let body=comment.body;
+                    body=body.replace(/```\w+/g,"");
+                    body=body.replace(/```/g,"");
                     try {
-                        const info = JSON.parse(comment.body);
+                        const info = JSON.parse(body);
                         return info;
                     } catch (e) {
                         return {};
