@@ -2,7 +2,7 @@ const allData={};
 function getAllData() {
     return new Promise(function (resolve) {
         $.ajax({
-            url: 'http://api.github.com/gists/a88b4d5ee4e5c0cfa28c725a453e5cd5/comments',
+            url: '//api.github.com/gists/a88b4d5ee4e5c0cfa28c725a453e5cd5/comments',
             type: 'GET',
             dataType: 'jsonp',
             success: function (data) {
